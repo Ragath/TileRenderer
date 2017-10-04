@@ -1,23 +1,109 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileRenderer.WindowsDX", "TileRenderer.WindowsDX\TileRenderer.WindowsDX.csproj", "{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileRenderer.DesktopGL", "TileRenderer.DesktopGL\TileRenderer.DesktopGL.csproj", "{62145CD0-BE9A-4BAD-9626-5278A9106BC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TileRenderer", "TileRenderer\TileRenderer.csproj", "{D3541E11-A1C1-44CC-A536-B0F843EB825D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12} = {18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TileRenderer.Pipeline", "TileRenderer.Pipeline\TileRenderer.Pipeline.csproj", "{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{440EEF7C-50B6-477F-A888-01F9EC6BDB84}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Content", "Content\", "{94C44F6A-160C-4840-91F0-2CF4254A6EFA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		ProjectReferences = ""
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50004"
+		Debug.AspNetCompiler.PhysicalPath = "Content\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50004\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50004"
+		Release.AspNetCompiler.PhysicalPath = "Content\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50004\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50004"
+		SlnRelativePath = "Content\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileRenderer.Android", "TileRenderer.Android\TileRenderer.Android.csproj", "{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Debug|Any CPU.Build.0 = Debug|x86
 		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Debug|x86.ActiveCfg = Debug|x86
 		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Debug|x86.Build.0 = Debug|x86
+		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Release|Any CPU.ActiveCfg = Release|x86
+		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Release|Any CPU.Build.0 = Release|x86
 		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Release|x86.ActiveCfg = Release|x86
 		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}.Release|x86.Build.0 = Release|x86
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Debug|x86.Build.0 = Debug|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Release|x86.ActiveCfg = Release|Any CPU
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5}.Release|x86.Build.0 = Release|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Debug|x86.Build.0 = Debug|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Release|x86.ActiveCfg = Release|Any CPU
+		{D3541E11-A1C1-44CC-A536-B0F843EB825D}.Release|x86.Build.0 = Release|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Debug|x86.Build.0 = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|x86.ActiveCfg = Debug|Any CPU
+		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|x86.Build.0 = Debug|Any CPU
+		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Release|x86.ActiveCfg = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|x86.Build.0 = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|x86.ActiveCfg = Release|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|x86.Build.0 = Release|Any CPU
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7} = {440EEF7C-50B6-477F-A888-01F9EC6BDB84}
+		{62145CD0-BE9A-4BAD-9626-5278A9106BC5} = {440EEF7C-50B6-477F-A888-01F9EC6BDB84}
+		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA} = {440EEF7C-50B6-477F-A888-01F9EC6BDB84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ACC9DC03-B8B2-486C-9860-BBBA012F73A3}
