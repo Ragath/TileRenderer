@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileRenderer.WindowsDX", "TileRenderer.WindowsDX\TileRenderer.WindowsDX.csproj", "{8D49DB02-5F0F-4F27-91B8-DE532E9C9AA7}"
 EndProject
@@ -16,29 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TileRenderer.Pipeline", "Ti
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{440EEF7C-50B6-477F-A888-01F9EC6BDB84}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Content", "Content\", "{94C44F6A-160C-4840-91F0-2CF4254A6EFA}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
-		ProjectReferences = ""
-		Debug.AspNetCompiler.VirtualPath = "/localhost_50004"
-		Debug.AspNetCompiler.PhysicalPath = "Content\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50004\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_50004"
-		Release.AspNetCompiler.PhysicalPath = "Content\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50004\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "50004"
-		SlnRelativePath = "Content\"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileRenderer.Android", "TileRenderer.Android\TileRenderer.Android.csproj", "{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Content", "Content\Content.csproj", "{9F6F419A-3C65-4240-9386-439CC5CC2A96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,10 +60,6 @@ Global
 		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|x86.ActiveCfg = Debug|Any CPU
 		{18CCE8E0-2FFE-442D-B3F9-C071D81C1A12}.Release|x86.Build.0 = Debug|Any CPU
-		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{94C44F6A-160C-4840-91F0-2CF4254A6EFA}.Release|x86.ActiveCfg = Debug|Any CPU
 		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -96,6 +72,14 @@ Global
 		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|x86.ActiveCfg = Release|Any CPU
 		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|x86.Build.0 = Release|Any CPU
 		{DF5C0EC7-547A-47FD-B3DF-FB5BBDDFCAAA}.Release|x86.Deploy.0 = Release|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Debug|x86.Build.0 = Debug|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Release|x86.ActiveCfg = Release|Any CPU
+		{9F6F419A-3C65-4240-9386-439CC5CC2A96}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

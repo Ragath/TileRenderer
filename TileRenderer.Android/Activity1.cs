@@ -2,62 +2,33 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Views;
+using Microsoft.Xna.Framework;
 
 namespace TileRenderer.Android
 {
-    [Activity(Label = "TileRenderer.Android"
-        , MainLauncher = true
-        , Icon = "@drawable/icon"
-        , Theme = "@style/Theme.Splash"
-        , AlwaysRetainTaskState = true
-        , LaunchMode = LaunchMode.SingleInstance
-        , ScreenOrientation = ScreenOrientation.Unspecified
-        , ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize | ConfigChanges.ScreenLayout)]
-    public class Activity1 : Microsoft.Xna.Framework.AndroidGameActivity
+    [Activity(
+        Label = "@string/app_name",
+        MainLauncher = true,
+        Icon = "@drawable/icon",
+        AlwaysRetainTaskState = true,
+        LaunchMode = LaunchMode.SingleInstance,
+        ScreenOrientation = ScreenOrientation.FullUser,
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize
+    )]
+    public class Activity1 : AndroidGameActivity
     {
-        const SystemUiFlags f =
-            SystemUiFlags.LayoutStable
-            | SystemUiFlags.LayoutHideNavigation
-            | SystemUiFlags.LayoutFullscreen
-            | SystemUiFlags.HideNavigation
-            | SystemUiFlags.Fullscreen
-            | SystemUiFlags.ImmersiveSticky;
+        private Game1 _game;
+        private View _view;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            var g = new Game1(game => new Microsoft.Xna.Framework.GraphicsDeviceManager(game)
-            {
-                SynchronizeWithVerticalRetrace = false,
-                SupportedOrientations = Microsoft.Xna.Framework.DisplayOrientation.Default,
-                IsFullScreen = true
-            });
-            SetContentView((View)g.Services.GetService(typeof(View)));
 
-            HideNavbar();
-            //HideSystemUI();
-            Resumed += Activity1_Resumed;
+            _game = new Game1();
+            _view = _game.Services.GetService(typeof(View)) as View;
 
-            g.Run();
-        }
-
-        private void Activity1_Resumed(object sender, System.EventArgs e)
-        {
-            HideNavbar();
-        }
-
-        private void HideNavbar()
-        {
-            if (Build.VERSION.SdkInt < BuildVersionCodes.JellyBean)
-                Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
-            else
-            {
-                Window.DecorView.SystemUiVisibility = (StatusBarVisibility)f;
-                if (ActionBar != null)
-                    ActionBar.Hide();
-            }
-            Immersive = true;
+            SetContentView(_view);
+            _game.Run();
         }
     }
 }
-

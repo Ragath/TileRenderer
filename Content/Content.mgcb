@@ -10,7 +10,8 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\TileRenderer.Pipeline\bin\Debug\net462\TileRenderer.Pipeline.dll
+/reference:bin/Debug/net6.0/TileRenderer.Pipeline.dll
+/reference:bin/Debug/net6.0/TiledLib.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
